@@ -1,0 +1,9 @@
+/*better prologue files*/
+/* start facts with ! and rules with ? */
+
+!child{johnson, french, bob, smith}
+!mother{french, bob}
+!father{johnson, french, smith}
+
+?family(X) :- child(X), mother(X), father(X).
+?partialFamily(X) :- child(X), (mother(X); father(X)).
